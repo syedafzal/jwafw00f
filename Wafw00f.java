@@ -80,7 +80,6 @@ public class Wafw00f
 						if(input.toLowerCase().startsWith("isit"))
 						{
 							String wafs=input.substring(5);
-							//System.out.println(wafs);
 							isitwaf=wafs;
 							route=2;
 						}
