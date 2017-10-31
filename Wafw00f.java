@@ -123,7 +123,7 @@ public class Wafw00f
 			}
 		catch(Exception e)
 			{
-				System.out.println("Error "+e.getMessage());
+				System.out.println("Error detected below "+e.getMessage());
 				e.printStackTrace();
 			}
 		
