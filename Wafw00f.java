@@ -132,7 +132,6 @@ public class Wafw00f
 		
 	static void setVerbose(int level)
 		{	
-			// level--;
 			boolean verb[]=new boolean[3];
 			for(int i=0;i<3;i++)
 				verb[i]=false;
@@ -307,7 +306,6 @@ class Jwafw00f implements Runnable
 				if(con.getResponseCode()!=200)
 				{
 					info(" Target Host Not Up. Aborting.");
-					// throw new Exception("Target is Down");
 					selectroute=-1;
 				}			
 			}
