@@ -319,7 +319,7 @@ class Jwafw00f implements Runnable
 			}
 	}
 
-	/*  the main action */
+	/*  start the thread */
 	public void run()
 	{
 	try {
