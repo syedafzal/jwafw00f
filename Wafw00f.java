@@ -111,7 +111,6 @@ public class Wafw00f
 						for(String subject:targetlist)
 							{
 								Jwafw00f instance=new Jwafw00f(subject,route);
-										
 								Thread execute=new Thread(instance);
 								execute.start();
 							}
@@ -210,6 +209,7 @@ class Jwafw00f implements Runnable
 			wafmap.put("dotdefender",20);
 			wafmap.put("beeware",21);
 			wafmap.put("imperva",22);
+			wafmap.put("positive",23);
 			// wafmap.put("modsecuritypositive",23);
 			
 	}
