@@ -489,7 +489,6 @@ class Jwafw00f implements Runnable
 			new TestWaf() { public boolean test() { return isdotdefender(); } },
 			new TestWaf() { public boolean test() { return isbeeware(); } },
 			new TestWaf() { public boolean test() { return isimperva(); } }
-		//, new TestWaf() { public boolean test() { return ismodsecuritypositive(); } }
 		};	
 	}
 	
@@ -724,7 +723,6 @@ class Jwafw00f implements Runnable
 					java.net.CookieStore rawCookieStore = ((java.net.CookieManager) CookieHandler.getDefault()).getCookieStore();
 
 				*/	
-				// info(testcookie);
 				cookies = cs.get(url.toURI());
 				if(cookies==null || cookies.isEmpty())
 				{	
