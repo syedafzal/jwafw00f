@@ -80,7 +80,6 @@ public class Wafw00f
 						if(input.toLowerCase().startsWith("isit"))
 						{
 							String wafs=input.substring(5);
-							//System.out.println(wafs);
 							isitwaf=wafs;
 							route=2;
 						}
@@ -124,7 +123,7 @@ public class Wafw00f
 			}
 		catch(Exception e)
 			{
-				System.out.println("Error "+e.getMessage());
+				System.out.println("Error detected below "+e.getMessage());
 				e.printStackTrace();
 			}
 		
@@ -132,7 +131,6 @@ public class Wafw00f
 		
 	static void setVerbose(int level)
 		{	
-			// level--;
 			boolean verb[]=new boolean[3];
 			for(int i=0;i<3;i++)
 				verb[i]=false;
@@ -307,7 +305,6 @@ class Jwafw00f implements Runnable
 				if(con.getResponseCode()!=200)
 				{
 					info(" Target Host Not Up. Aborting.");
-					// throw new Exception("Target is Down");
 					selectroute=-1;
 				}			
 			}
@@ -322,7 +319,7 @@ class Jwafw00f implements Runnable
 			}
 	}
 
-	/*  the main action */
+	/*  start the thread */
 	public void run()
 	{
 	try {
@@ -492,7 +489,6 @@ class Jwafw00f implements Runnable
 			new TestWaf() { public boolean test() { return isdotdefender(); } },
 			new TestWaf() { public boolean test() { return isbeeware(); } },
 			new TestWaf() { public boolean test() { return isimperva(); } }
-		//, new TestWaf() { public boolean test() { return ismodsecuritypositive(); } }
 		};	
 	}
 	
@@ -727,7 +723,6 @@ class Jwafw00f implements Runnable
 					java.net.CookieStore rawCookieStore = ((java.net.CookieManager) CookieHandler.getDefault()).getCookieStore();
 
 				*/	
-				// info(testcookie);
 				cookies = cs.get(url.toURI());
 				if(cookies==null || cookies.isEmpty())
 				{	
